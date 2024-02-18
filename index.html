@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF en HTML</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif; /* Cambiar la fuente según tus preferencias */
+        }
+
+        #titulo {
+            text-align: center;
+            padding: 10px; /* Ajustar el espacio alrededor del texto */
+            background-color: #f2f2f2; /* Fondo gris claro */
+            color: #333; /* Color del texto */
+            font-size: 18px; /* Tamaño del texto */
+        }
+
+        #titulo::before {
+            content: "\1F552"; /* Código Unicode del emoji de reloj */
+            font-size: 24px; /* Tamaño del emoji */
+            margin-right: 10px; /* Espacio entre el emoji y el texto */
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100% - 20px); /* Restar el espacio del título al alto del iframe */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo">Horario Personal</div>
+    <iframe src="HorarioPersonal.pdf"></iframe>
+</body>
+</html>
